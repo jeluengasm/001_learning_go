@@ -1,44 +1,26 @@
 package main
 
-import (
-	"fmt"
-	"strings"
-)
-
-func isPalindrome(text string) bool {
-	text = strings.ToLower(text)
-	var textReversed string
-
-	for i := len(text) - 1; i >= 0; i-- {
-		textReversed += string(text[i])
-	}
-
-	if textReversed == text {
-		return true
-	} else {
-		return false
-	}
-}
+import "fmt"
 
 func main() {
-	slice := []string{"Hello", "World", "from", "Golang"}
+	m := make(map[string]int)
 
-	for key, val := range slice {
+	m["hello"] = 10
+	m["world"] = 14
+
+	fmt.Println(m)
+
+	// Slicing maps
+	for key, val := range m {
 		fmt.Println(key, val)
 	}
 
-	fmt.Println()
+	value := m["hello"]
+	fmt.Println(value)
 
-	for _, val := range slice {
-		fmt.Println(val)
-	}
+	value2 := m["hellooo"] // If doesn't exist, return zero value
+	fmt.Println(value2)
 
-	fmt.Println()
-
-	for key := range slice {
-		fmt.Println(key)
-	}
-
-	fmt.Println("Ama:", isPalindrome("Ama"))
-	fmt.Println("taco cat:", isPalindrome("taco cat"))
+	value2, confirm := m["hellooo"] // If doesn't exist, return zero value
+	fmt.Println(value2, confirm)
 }
