@@ -3,41 +3,26 @@ package main
 import "fmt"
 
 func main() {
+	// Classsic Println
+	// Variables
+	helloMsg := "Hello"
+	worldMsg := "World"
 
-	// Calculating area
+	fmt.Println(helloMsg, worldMsg)
+	fmt.Println(helloMsg, worldMsg)
 
-	const baseSquare = 10
-	squareArea := baseSquare * baseSquare
-	fmt.Println("Square area:", squareArea)
+	// Printf
+	name := "Jhon"
+	quantity := 100
 
-	x := 10
-	y := 50
+	fmt.Printf("%s has finished more than %d courses.\n", name, quantity)
+	fmt.Printf("%v has finished more than %v courses.\n", name, quantity)
 
-	// Sum
-	result := x + y
-	fmt.Println("Sum:", result)
+	// Sprintf
+	msg := fmt.Sprintf("%s has finished more than %d courses.", name, quantity)
+	fmt.Println(msg)
 
-	// Substract
-	result = x - y
-	fmt.Println("Substract:", result)
-
-	// Product
-	result = x * y
-	fmt.Println("Product:", result)
-
-	// Divission
-	result = x / y
-	fmt.Println("Divission:", result)
-
-	// Modulo
-	result = x % y
-	fmt.Println("Modulo:", result)
-
-	// Increment
-	x++
-	fmt.Println("Increment:", x)
-
-	// Decrement
-	x--
-	fmt.Println("Decrement:", x)
+	// Get datatype
+	fmt.Printf("helloMsg: %T", helloMsg)
+	fmt.Printf("\nworldMsg: %T", worldMsg)
 }
