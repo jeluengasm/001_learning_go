@@ -1,33 +1,31 @@
 package main
 
-import (
-	"fmt"
-	"log"
-	"strconv"
-)
+import "fmt"
 
 func main() {
-
-	value1 := 1
-	value2 := 2
-
-	if value1 == 1 {
-		fmt.Println("It's 1")
-	} else {
-		fmt.Println("Isn't 1")
+	modulo := 5 % 2
+	switch modulo {
+	case 0:
+		fmt.Println("Even")
+	default:
+		fmt.Println("Odd")
 	}
 
-	if value1 == 1 && value2 == 2 {
-		fmt.Println("It's true AND")
+	switch modulo2 := 4 % 2; modulo2 {
+	case 0:
+		fmt.Println("Even")
+	default:
+		fmt.Println("Odd")
 	}
 
-	if value1 == 0 || value2 == 2 {
-		fmt.Println("It's true OR")
-	}
+	value2 := 200
+	switch {
+	case value2 > 100:
+		fmt.Println("Is greather than 100")
+	case value2 < 0:
+		fmt.Println("Is less than 0")
+	default:
+		fmt.Println("Undefined")
 
-	val, err := strconv.Atoi("53")
-	if err != nil {
-		log.Fatal(err)
 	}
-	fmt.Println("Value:", val)
 }
