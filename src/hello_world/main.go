@@ -1,27 +1,33 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"log"
+	"strconv"
+)
 
 func main() {
-	// For with conditional
-	for i := 0; i < 10; i++ {
-		fmt.Println(i)
+
+	value1 := 1
+	value2 := 2
+
+	if value1 == 1 {
+		fmt.Println("It's 1")
+	} else {
+		fmt.Println("Isn't 1")
 	}
 
-	fmt.Println()
-
-	// for while
-	counter := 0
-	for counter < 10 {
-		fmt.Println(counter)
-		counter++
+	if value1 == 1 && value2 == 2 {
+		fmt.Println("It's true AND")
 	}
 
-	// for forever
-
-	counterForever := 0
-	for {
-		fmt.Println(counterForever)
-		counterForever++
+	if value1 == 0 || value2 == 2 {
+		fmt.Println("It's true OR")
 	}
+
+	val, err := strconv.Atoi("53")
+	if err != nil {
+		log.Fatal(err)
+	}
+	fmt.Println("Value:", val)
 }
