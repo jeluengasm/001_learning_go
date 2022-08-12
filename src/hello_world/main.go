@@ -2,25 +2,23 @@ package main
 
 import "fmt"
 
+type car struct {
+	brand string
+	year  int
+}
+
 func main() {
-	m := make(map[string]int)
-
-	m["hello"] = 10
-	m["world"] = 14
-
-	fmt.Println(m)
-
-	// Slicing maps
-	for key, val := range m {
-		fmt.Println(key, val)
+	myCar := car{
+		brand: "Ford",
+		year:  2020,
 	}
+	fmt.Println(myCar)
 
-	value := m["hello"]
-	fmt.Println(value)
+	// Another way
+	var otherCar car
+	otherCar.brand = "Ferrari"
+	fmt.Println(otherCar)
+	otherCar.year = 2023
+	fmt.Println(otherCar)
 
-	value2 := m["hellooo"] // If doesn't exist, return zero value
-	fmt.Println(value2)
-
-	value2, confirm := m["hellooo"] // If doesn't exist, return zero value
-	fmt.Println(value2, confirm)
 }
