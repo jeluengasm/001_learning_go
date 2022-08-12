@@ -2,27 +2,25 @@ package main
 
 import "fmt"
 
+func getMessage(s1 string, s2 string) {
+	fmt.Println(s1, s2)
+}
+
+func duplicateNumber(n int32) int32 {
+	return n * 2
+}
+
+func doubleReturn(a int) (b, c int) {
+	return a, a * 2
+}
+
 func main() {
-	// Classsic Println
-	// Variables
-	helloMsg := "Hello"
-	worldMsg := "World"
+	getMessage("Hello,", "world!")
+	val1 := duplicateNumber(4)
+	fmt.Println(val1)
+	val2, val3 := doubleReturn(4)
+	fmt.Println(val2, val3)
 
-	fmt.Println(helloMsg, worldMsg)
-	fmt.Println(helloMsg, worldMsg)
-
-	// Printf
-	name := "Jhon"
-	quantity := 100
-
-	fmt.Printf("%s has finished more than %d courses.\n", name, quantity)
-	fmt.Printf("%v has finished more than %v courses.\n", name, quantity)
-
-	// Sprintf
-	msg := fmt.Sprintf("%s has finished more than %d courses.", name, quantity)
-	fmt.Println(msg)
-
-	// Get datatype
-	fmt.Printf("helloMsg: %T", helloMsg)
-	fmt.Printf("\nworldMsg: %T", worldMsg)
+	val4, _ := doubleReturn(4) // if one of the values wont need it
+	fmt.Println("Val4:", val4)
 }
