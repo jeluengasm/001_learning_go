@@ -1,8 +1,8 @@
 package main
 
 import (
+	pk "001_learning_go/src/014_access_modifiers/src/mypackage"
 	"fmt"
-	pk "hello_world/src/mypackage"
 )
 
 func main() {
