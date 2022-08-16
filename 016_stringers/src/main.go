@@ -1,8 +1,9 @@
 package main
 
 import (
-	pc "001_learning_go/src/016_stringers/src/pc"
 	"fmt"
+
+	pc "github.com/jeluengasm/001_learning_go/016_stringers/src/pc"
 )
 
 func main() {

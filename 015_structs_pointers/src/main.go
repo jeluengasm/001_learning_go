@@ -1,8 +1,9 @@
 package main
 
 import (
-	pc "001_learning_go/src/015_structs_pointers/src/pc"
 	"fmt"
+
+	pc "github.com/jeluengasm/001_learning_go/015_structs_pointers/src/pc"
 )
 
 func main() {
