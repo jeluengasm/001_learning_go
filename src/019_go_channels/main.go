@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func say(s string, c chan string) {
+func say(s string, c chan<- string) { // Only input channel
 	c <- s
 }
 
@@ -11,5 +11,5 @@ func main() {
 	fmt.Println("Hello")
 	go say("Bye", c)
 
-	fmt.Println(<-c)
+	fmt.Println(<-c) // Get response from the channel (output channel)
 }
