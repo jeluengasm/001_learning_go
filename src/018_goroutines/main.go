@@ -8,7 +8,6 @@ import (
 
 func say(s string, wg *sync.WaitGroup) {
 	defer wg.Done()
-
 	fmt.Println(s)
 }
 
